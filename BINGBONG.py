@@ -32,7 +32,8 @@ class Player(GameSprite):
 
 
 plauer1 = Player('slon.png', 50, 400, 80, 100, 15)
-plauer2 = Player('bron.png', 50, 400, 80, 100, 15)
+plauer2 = Player('bron.png', 350, 400, 80, 100, 15)
+bill = GameSprite('oler.png', 200, 200, 10, 20, 10)
 
 font.init()
 font1 = font.SysFont('Arial', 60)
@@ -53,14 +54,8 @@ while run:
         plauer1.reset()
         plauer2.update()
         plauer2.reset()
-'''
-        if totol >= 10:
-            window.blit(win, (200, 250))
-            finish = True
-        if lost >= 5 or life <= 0:
-            window.blit(lose, (200, 250))
-            finish = True
-'''
+        bill.update()
+        bill.reset()
 
     display.update()
     clock.tick(FPS)
